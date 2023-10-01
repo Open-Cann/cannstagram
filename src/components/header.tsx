@@ -40,7 +40,7 @@ const Header = () => {
                 className="font-bold text-xl"
                 onClick={() => push("/")}
               >
-                {process.env.NEXT_PUBLIC_APP_TITLE || "Minsta"}
+                {process.env.NEXT_PUBLIC_APP_TITLE || "Cannsta"}
               </button>
             </div>
             <div className="flex gap-4">
