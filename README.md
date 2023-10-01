@@ -1,18 +1,11 @@
-# Minsta
+# Cannsta
 
-This repository hosts the primary codebase for the [Minsta App](https://minsta.me), originally created and developed by [@microchipgnu](https://github.com/microchipgnu). 
-
-All new Minsta instances should be derived from this repository.
+This repository hosts the primary codebase for the [Cannsta App](https://cannsta.co), originally created and developed by [@microchipgnu](https://github.com/microchipgnu) as Minsta. 
 
 ## Demo
 
-Check out the live demo here: [minsta demo](https://minsta-app.vercel.app/).
+Check out the live demo here: [Cannsta demo](https://cannsta.co/).
 
-## One-Click Deploy
-
-Deploy this project using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMintbase%2Fminsta)
 
 ## Getting Started
 
