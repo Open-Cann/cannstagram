@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const appName: string = process.env.NEXT_PUBLIC_APP_TITLE || "MINTBASE";
+const appName: string = process.env.NEXT_PUBLIC_APP_TITLE || "Cannsta";
 const network = process.env.NEXT_PUBLIC_NETWORK || "testnet";
 const proxyContractAddress =
   process.env.NEXT_PUBLIC_PROXY_MINTER_CONTRACT_ADDRESS ||
