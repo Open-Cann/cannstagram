@@ -9,7 +9,7 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
 
 ## Getting Started
 
-To start with this project:
+To contribute to the development of this project:
 
 1. Clone the repository.
 2. If you don't have `pnpm` installed, run:
