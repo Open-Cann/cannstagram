@@ -1,0 +1,20 @@
+:root {
+          --primary: #1A1B20;
+          --secondary: #000;
+          --mainBg: #1A1B20;
+          --gradOne: #CFFC71;
+          --gradTwo: #CFFC71;
+          --cardOne: #33343A;
+          --cardTwo: #CFFC71;
+          --linkColor: #C5D0FF;
+          --icon: #CFFC71;
+          --camera: #1A1B20;
+          --modalText: #FFFFFF;
+          --leaderboardText: #FFFFFF;
+          --headerText: #FFFFFF;
+          --mainText: #FFFFFF;
+          --freeUseText: #0A7D6C;
+          --bgFreeUse: #0A7D6C1A;
+          --primaryBtnText: #000000;
+          --secondaryBtnText: #FFFFFF;
+        }
