@@ -2,8 +2,6 @@
 
 This repository hosts the primary codebase for the [Cannsta App](https://cannsta.co), originally created and developed by [@microchipgnu](https://github.com/microchipgnu) as [Minsta](https://github.com/Mintbase/minsta/). 
 
----
-
 ## Demo
 
 Check out the live demo here: [Cannsta demo](https://cannsta.co/).
@@ -13,8 +11,6 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
 ![How it works](https://pbs.twimg.com/media/F7ZwH1RagAAuyls?format=png&name=small)
 
 ![Rewards](https://pbs.twimg.com/media/F7ZwNGea4AAq8fz?format=png&name=small)
-
----
 
 ## How To Contribute
 
@@ -54,8 +50,6 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
      ```bash
      pnpm install
      ```
-
----
 
 ## Environment Variables
 
