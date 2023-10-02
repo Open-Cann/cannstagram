@@ -1,6 +1,6 @@
 # Cannsta
 
-This repository hosts the primary codebase for the [Cannsta App](https://cannsta.co), originally created and developed by [@microchipgnu](https://github.com/microchipgnu) as Minsta. 
+This repository hosts the primary codebase for the [Cannsta App](https://cannsta.co), originally created and developed by [@microchipgnu](https://github.com/microchipgnu) as [Minsta](https://github.com/Mintbase/minsta/). 
 
 ## Demo
 
