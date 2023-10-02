@@ -2,6 +2,8 @@
 
 This repository hosts the primary codebase for the [Cannsta App](https://cannsta.co), originally created and developed by [@microchipgnu](https://github.com/microchipgnu) as [Minsta](https://github.com/Mintbase/minsta/). 
 
+---
+
 ## Demo
 
 Check out the live demo here: [Cannsta demo](https://cannsta.co/).
@@ -12,6 +14,8 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
 
 ![Rewards](https://pbs.twimg.com/media/F7ZwNGea4AAq8fz?format=png&name=small)
 
+---
+
 ## How To Contribute
 
 **To Do List:**
@@ -21,7 +25,7 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
      - [ ] post content (hashtags, mentions, etc)
      - [ ] post analytics (views, likes, etc)
      - [ ] publisher analytics (follower count, account age, etc)
-- [ ] Barter posts
+- [ ] [Barter posts](https://near.org/harrydhillon.near/widget/NFTSwap.NFT-Trade)
 - [ ] Stream royalties directly to creators
 - [ ] Post captions
    - [ ] auto-add #CANNSTA to every post
@@ -50,6 +54,8 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
      ```bash
      pnpm install
      ```
+
+---
 
 ## Environment Variables
 
