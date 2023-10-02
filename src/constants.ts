@@ -17,7 +17,7 @@ const mintbaseWalletUrl =
 
 const twitterText =
   process.env.NEXT_PUBLIC_TWITTER ||
-  "Own and trade social posts on Cannsta";
+  "Own%20and%20trade%20social%20%2posts%20on%20%23Cannsta%20%40OpenCann%20%40NEARProtocol";
 
 export const constants = {
   appName,
