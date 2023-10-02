@@ -26,7 +26,7 @@ To contribute to the development of this project:
 
 ## Environment Variables
 
-Refer to the **.env.example** file for the environment variables used in this project. 
+Refer to **.env** for the environment variables used in this project. 
 
 If you don't set up a `.env` file or environment variables with your provider, the project will retrieve values from the following files:
 
