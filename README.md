@@ -31,7 +31,7 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
 - [ ] Improve feed UI to be more like Twitter & IG
 
 
-**To contribute to the development of this project:**
+**Run on localhost:**
 
 1. Clone the repository.
 2. If you don't have `pnpm` installed, run:
