@@ -21,19 +21,24 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
      - [ ] post content (hashtags, mentions, etc)
      - [ ] post analytics (views, likes, etc)
      - [ ] publisher analytics (follower count, account age, etc)
+           
 - [ ] [Barter posts](https://near.org/harrydhillon.near/widget/NFTSwap.NFT-Trade)
 - [ ] Stream royalties directly to creators
+      
+- [ ] Like button
+- [ ] Follow button
+      
 - [ ] Post captions
    - [ ] auto-add #CANNSTA to every post
-- [ ] Like button
+- [ ] Post comments
+      
 - [ ] Profile page
    - [ ] User analytics
-- [ ] Follow button
-- [ ] Post comments
+- [ ] Improve feed UI to be more like Twitter & IG
+         
 - [ ] Reels
 - [ ] Stories
 - [ ] dms
-- [ ] Improve feed UI to be more like Twitter & IG
 
 
 **Run on localhost:**
