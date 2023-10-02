@@ -3,7 +3,7 @@ export const MINSTA_META = {
   description: "Own and trade social posts on Cannstagram!",
   title: "Cannstagram: cannabis social done right",
   twitter:
-    "Own%20and%20trade%20social%20%2posts%20on%20%23Cannsta%20%40OpenCann%20%40NEARProtocol",
+    "Own%20and%20trade%20social%20posts%20on%20%23Cannsta%20%40OpenCann%20%40NEARProtocol%0a",
   image: "./images/thumbnail.png",
 };
 
