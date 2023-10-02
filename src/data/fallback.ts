@@ -3,7 +3,7 @@ export const MINSTA_META = {
   description: "Share your best moments with Cannsta!",
   title: "Mint Moments on Cannsta",
   twitter:
-    "Explore%20unforgettable%20moments%20at%20%2Mintbase%20%40Mintbase%20%40NEARProtocol%20%23BOS%20%23NEAR",
+    "Own%20and%20trade%20social%20%2posts%20on%20%23Cannsta%20%40OpenCann%20%40NEARProtocol",
   image: "./images/thumbnail.png",
 };
 
