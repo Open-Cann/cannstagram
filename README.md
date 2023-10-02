@@ -28,7 +28,7 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
 - [ ] Reels
 - [ ] Stories
 - [ ] dms
-- [] Improve feed UI to be more like Twitter & IG
+- [ ] Improve feed UI to be more like Twitter & IG
 
 
 **To contribute to the development of this project:**
