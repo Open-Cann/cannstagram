@@ -74,6 +74,10 @@ const RewardsModal = ({
             <p className="uppercase text-xs mb-1.5 text-center">POWERED BY</p>
             <div className="flex justify-center gap-5">
               <InlineSVG
+                src="/images/opencann_logo.svg"
+                className="fill-current text-modal"
+              />
+              <InlineSVG
                 src="/images/MB_logo.svg"
                 className="fill-current text-modal"
               />
