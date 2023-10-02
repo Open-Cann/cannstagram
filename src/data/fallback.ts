@@ -1,7 +1,7 @@
 
 export const MINSTA_META = {
-  description: "Share your best moments with Cannsta!",
-  title: "Mint Moments on Cannsta",
+  description: "Own and trade social posts on Cannstagram!",
+  title: "Cannstagram: cannabis social done right",
   twitter:
     "Own%20and%20trade%20social%20%2posts%20on%20%23Cannsta%20%40OpenCann%20%40NEARProtocol",
   image: "./images/thumbnail.png",
