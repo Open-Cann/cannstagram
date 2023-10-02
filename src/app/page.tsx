@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description:
       process.env.NEXT_PUBLIC_META_DESCRIPTION ?? MINSTA_META.description,
     siteId: "1467726470533754880",
-    creator: "Mintbase",
+    creator: "OpenCann.net",
     images: process.env.NEXT_PUBLIC_META_IMAGE ?? MINSTA_META.image,
   },
 };
