@@ -6,6 +6,11 @@ This repository hosts the primary codebase for the [Cannsta App](https://cannsta
 
 Check out the live demo here: [Cannsta demo](https://cannsta.co/).
 
+![Cannstagram logo](https://i.ibb.co/71GdjnT/thumbnail.png)
+
+![How it works](https://pbs.twimg.com/media/F7ZwH1RagAAuyls?format=png&name=small)
+
+![Rewards](https://pbs.twimg.com/media/F7ZwNGea4AAq8fz?format=png&name=small)
 
 ## How To Contribute
 
@@ -84,3 +89,5 @@ If you have deployed your project on Vercel, follow these steps to update your e
 4. Trigger a redeployment of your app to apply the changes.
 
 By following these steps, you can ensure that your project uses the updated environment variables.
+
+
