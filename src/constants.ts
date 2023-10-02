@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const appName: string = process.env.NEXT_PUBLIC_APP_TITLE || "Cannsta";
+const appName: string = process.env.NEXT_PUBLIC_APP_TITLE || "Cannstagram";
 const network = process.env.NEXT_PUBLIC_NETWORK || "mainnet";
 const proxyContractAddress =
   process.env.NEXT_PUBLIC_PROXY_MINTER_CONTRACT_ADDRESS ||
