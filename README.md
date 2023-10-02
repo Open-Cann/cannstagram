@@ -7,7 +7,29 @@ This repository hosts the primary codebase for the [Cannsta App](https://cannsta
 Check out the live demo here: [Cannsta demo](https://cannsta.co/).
 
 
-## Getting Started
+## How To Contribute
+
+To Do List:
+[] Enable users to list posts on [Mintbase](https://mintbase.xyz) and [OpenCann](https://www.opencann.net/)
+  [] standardize & automate pricing for querying "post" type based on
+     [] size of data stored (Mb)
+     [] post content (hashtags, mentions, etc)
+     [] post analytics (views, likes, etc)
+     [] publisher analytics (follower count, account age, etc)
+[] Barter posts
+[] Stream royalties directly to creators
+[] Post captions
+   [] auto-add #CANNSTA to every post
+[] Like button
+[] Profile page
+   [] User analytics
+[] Follow button
+[] Post comments
+[] Reels
+[] Stories
+[] dms
+[] Improve feed UI to be more like Twitter & IG
+
 
 To contribute to the development of this project:
 
