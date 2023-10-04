@@ -34,6 +34,9 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
 - [ ] Reels
 - [ ] Stories
 - [ ] dms
+- [ ] Integrate posts as a fileformat type in [Hyperfiles](https://github.com/flowscience/hyperfiles)
+- [ ] Issue [Hypercerts](https://github.com/open-cann/hypercerts-on-bos) to all users and store in [Token bound accounts](https://eips.ethereum.org/EIPS/eip-6551)
+      - Additional references: [Future Primitive](https://medium.com/future-primitive/tldr-nfts-have-their-own-wallets-try-it-here-http-tokenbound-org-6fac135a1f9d) and [CoinMonks](https://medium.com/coinmonks/erc-6551-token-bound-accounts-daa56fbd3769)
 
 
 **Run on localhost:**
