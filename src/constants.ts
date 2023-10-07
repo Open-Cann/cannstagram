@@ -6,7 +6,7 @@ const proxyContractAddress =
   process.env.NEXT_PUBLIC_PROXY_MINTER_CONTRACT_ADDRESS ||
   "1.minsta.mintbus.near";
 const tokenContractAddress =
-  process.env.NEXT_PUBLIC_NFT_CONTRACT_ADDRESS || "cansta.mintbase1.near";
+  process.env.NEXT_PUBLIC_NFT_CONTRACT_ADDRESS || "cannsta.mintbase1.near";
 
 const mintbaseBaseUrl =
   process.env.NEXT_PUBLIC_BASE_URL || "https://mintbase.xyz";
