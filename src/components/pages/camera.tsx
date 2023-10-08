@@ -108,14 +108,6 @@ export default function CameraPage() {
               }}
             />
           )}
-
-          {/* Button container with absolute positioning */}
-          <div className="absolute bottom-50 left-0 w-full flex justify-center p-4">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={overlayMask}>
-              Use a Mask
-            </button>
-            {/* Add more buttons as needed */}
-          </div>
         </div>
       </main>
           
