@@ -52,7 +52,7 @@ export default function CameraPage() {
     document.body.appendChild(img);
 
     // Update the image index in state
-    setImageIndex(nextImageIndex as null);
+    setImageIndex(nextImageIndex as unknown);
 
     // Remove the image after 10 seconds (10000 milliseconds)
     setTimeout(() => {
