@@ -31,6 +31,7 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
 - [ ] Profile page
    - [ ] User analytics
 - [ ] Improve feed UI to be more like Twitter & IG
+- [ ] Camera filters (as NFTs) - frames, colors, emoji masks
 - [ ] Reels
 - [ ] Stories
 - [ ] dms
