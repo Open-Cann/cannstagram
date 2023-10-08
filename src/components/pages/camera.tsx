@@ -1,3 +1,5 @@
+import React from "react";
+import { useState } from "react";
 import { Mint } from "@/components/Mint";
 import { FooterButton } from "@/components/footer";
 import Webcam from "react-webcam";
@@ -16,6 +18,56 @@ export default function CameraPage() {
     setCameraLoaded,
     capture,
   } = useCamera();
+
+  const [imageIndex, setImageIndex] = useState(null); // State to keep track of the current image index
+  const images = [
+    "https://i.ibb.co/3vd5dYS/Open-Cann-Icon-2023.png",
+    "https://i.ibb.co/x2KvnKd/cannabisgenome-e-Noun-removebg-preview.png",
+    "https://i.ibb.co/sR34j87/OIP-removebg-preview.png"
+    // Add more image filenames to the array as needed
+  ]; 
+  const overlayMask = () => {
+    // Get the current image index from state
+    const currentImageIndex = imageIndex !== null ? imageIndex : -1;
+    const nextImageIndex = (currentImageIndex + 1) % (images.length + 1); // Add 1 to the array length
+  
+    // Remove the currently displayed image
+    const currentImage = document.getElementById("image-overlay");
+    if (currentImage) {
+      currentImage.remove();
+    }
+  
+    // If nextImageIndex is within the array bounds, display the next image overlay
+    if (nextImageIndex < images.length) {
+      const img = document.createElement("img");
+      img.src = images[nextImageIndex];
+      img.style.position = "absolute";
+      img.width = 290; // Set the desired width
+      img.height = 290; // Set the desired height
+      img.style.top = "50%";
+      img.style.left = "50%";
+      img.style.transform = "translate(-50%, -50%)";
+      img.style.zIndex = "9999";
+      img.id = "image-overlay"; // Set an ID for easy removal
+      document.body.appendChild(img);
+  
+      // Update the image index in state
+      setImageIndex(nextImageIndex);
+  
+      // Remove the image after 15 seconds (15000 milliseconds)
+      setTimeout(() => {
+        // Check if img element exists before removing it
+        const currentImage = document.getElementById("image-overlay");
+        if (currentImage) {
+          currentImage.remove();
+          setImageIndex(null); // Reset the image index
+        }
+      }, 15000);
+    } else {
+      // If nextImageIndex is out of bounds, set imageIndex to null to prevent further cycling
+      setImageIndex(null);
+    }
+  };
 
   if (picture) {
     return <Mint currentPhoto={picture} backStep={tryAgain} />;
@@ -59,8 +111,17 @@ export default function CameraPage() {
               }}
             />
           )}
+
+          {/* Button container with absolute positioning */}
+          <div className="absolute bottom-50 left-0 w-full flex justify-center p-4">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={overlayMask}>
+              Use a Mask
+            </button>
+            {/* Add more buttons as needed */}
+          </div>
         </div>
       </main>
+          
       {!picture && (
         <footer className="fixed bottom-0 left-0 flex w-full items-end justify-center bg-primary h-16">
           <FooterButton onClick={capture} />
