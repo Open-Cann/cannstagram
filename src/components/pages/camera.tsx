@@ -42,30 +42,41 @@ export default function CameraPage() {
     setShowOverlay(false);
   };
 
-  const compositeImages = (cameraImageUrl: string, overlayImageUrl: string): void => {
-    const cameraImg = new Image();
-    cameraImg.onload = () => {
-      const overlayImg = new Image();
-      overlayImg.crossOrigin = 'anonymous'; // Set crossOrigin attribute for CORS support
-      overlayImg.onload = () => {
-        const canvas = document.createElement("canvas");
-        canvas.width = cameraImg.width;
-        canvas.height = cameraImg.height;
-        const context = canvas.getContext("2d");
+  const compositeImages = async (cameraImageUrl: string, overlayImageUrl: string): Promise<void> => {
+    try {
+      const response = await fetch(`/api/proxy-image?url=${encodeURIComponent(overlayImageUrl)}`);
+      if (response.ok) {
+        const overlayImageBlob = await response.blob();
+        const overlayImageUrlObject = URL.createObjectURL(overlayImageBlob);
   
-        // Draw camera image
-        context?.drawImage(cameraImg, 0, 0, canvas.width, canvas.height);
+        const cameraImg = new Image();
+        cameraImg.onload = () => {
+          const overlayImg = new Image();
+          overlayImg.onload = () => {
+            const canvas = document.createElement("canvas");
+            canvas.width = cameraImg.width;
+            canvas.height = cameraImg.height;
+            const context = canvas.getContext("2d");
   
-        // Draw overlay image
-        context?.drawImage(overlayImg, 0, 0, canvas.width, canvas.height);
+            // Draw camera image
+            context?.drawImage(cameraImg, 0, 0, canvas.width, canvas.height);
   
-        // Set the composite image to state
-        setCameraImage(canvas.toDataURL("image/png"));
-      };
-      overlayImg.src = `${proxyUrl}${encodeURIComponent(overlayImageUrl)}`;
-    };
-    cameraImg.src = cameraImageUrl;
-  };
+            // Draw overlay image
+            context?.drawImage(overlayImg, 0, 0, canvas.width, canvas.height);
+  
+            // Set the composite image to state
+            setCameraImage(canvas.toDataURL("image/png"));
+          };
+          overlayImg.src = overlayImageUrlObject;
+        };
+        cameraImg.src = cameraImageUrl;
+      } else {
+        console.error("Failed to fetch overlay image");
+      }
+    } catch (error) {
+      console.error("Error fetching overlay image", error);
+    }
+  };  
 
   const handleCapture = () => {
     const cameraImageUrl = webcamRef.current.getScreenshot();
