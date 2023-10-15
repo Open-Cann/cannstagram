@@ -12,6 +12,19 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
 
 ![Rewards](https://pbs.twimg.com/media/F7ZwNGea4AAq8fz?format=png&name=small)
 
+## Features Added During Encode x Near Horizon Hackathon
+
+**Introducing Masks!**
+Wanna use Cannsta or Minsta, but prefer to stay anon? We gotchu.
+
+With Masks you can select from any of our preloaded images to cover your face when capturing a selfie.
+
+Just click the "Use a Mask" button on the camera preview page to cycle through preloaded images and see how they look on you. If you don't like the Masks we've created, you can even pass through a link to an external image to use any image you want as a Mask.
+
+Technical background: Masks was created by developing the `overlayMask()`` function in the `camera.tsx`` component, then pairing `overlayMask()`` with a `useEffect`` to introduce a countdown timer. The timer has dual functionality in allowing users to back out of a large array of preloaded Masks without having to cycle the entire way through; while also serving as a countdown timer for users that want to strike a pose while wearing thier Mask. We then abstracted part of this function to a helper component, `overlayMask.tsx`, and added a proxy server component using Express.js and `node-fetch` (`proxy-server.js`) in the main project folder to enable saving a composite images. This required further updates to `camera.tsx` to add an HTML canvas element and CORS support (also installing `cors 2.8.5`). The CORS support and proxy server were required to combine the camera preview with the Mask overlay image into a flat, one-layer `.png` file that was not a "tainted canvas" (violates same-origin policy, images from a different origin than the script). In fixing this bug, we were able to expand the functionality of Masks to allow users to pass in the URL of any image and wear it as thier Mask. The flexibility of using any images in the preloaded array of Masks, along with enabling users to use any Mask they wan, creates a new way for community forks of Minsta to drive engagement.
+
+The proxy server can be initiated by running `node proxy-server.js`
+
 ## How To Contribute
 
 **To Do List:**
