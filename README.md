@@ -16,11 +16,9 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
 
 _**Masks, and all features described in this section were created during the Encode x Near Horizon Hackathon.**_
 
-Do you want to use Cannsta or Minsta, but prefer to stay anon? 🕵️ We gotchu.
-
-With [Masks](https://www.cannsta.co/camera), you can select from any of our preloaded images to cover your face when capturing a selfie.
-
-Just click the "Use a Mask" button on the camera preview page to cycle through preloaded images and see how they look on you. If you don't like the Masks we've created, you can even pass through a link to an external image to use any image you want as a Mask.
+- Do you want to use Cannsta or Minsta, but prefer to stay anon? 🕵️ We gotchu.
+- With [Masks](https://www.cannsta.co/camera), you can select from any of our preloaded images to cover your face when capturing a selfie.
+- Just click the "Use a Mask" button on the camera preview page to cycle through preloaded images and see how they look on you. If you don't like the Masks we've created, you can even pass through a link to an external image to use any image you want as a Mask.
 
 #### **Technical background**
 
