@@ -46,7 +46,7 @@ interface MaskModalProps {
     <div className="modal-wrapper">
       <div className="modal">
         <div className="modal-header">
-          <h2 className="text-xl font-semibold">Add Custom Mask</h2>
+          <h2 className="text-xl font-semibold">Add Custom Mask 🎭</h2>
           <button className="close-btn" onClick={handleCancel}>
             <InlineSVG src="/images/close-icon.svg" />
           </button>

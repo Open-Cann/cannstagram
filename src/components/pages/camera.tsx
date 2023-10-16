@@ -6,6 +6,7 @@ import { useCamera } from "@/hooks/useCamera";
 import InlineSVG from "react-inlinesvg";
 import OverlayMask from "../OverlayMask";
 import MaskModal from "@/components/MaskModal";
+import fetch from 'node-fetch';
 
 export default function CameraPage() {
   const {
