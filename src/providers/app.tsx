@@ -1,5 +1,5 @@
-import React, { useContext, useState, createContext } from "react";
-import { useRouter } from "next/navigation";
+import React, { useContext, useState, useRef, useEffect, createContext } from "react";
+import { useRouter } from "next/router";
 import { useWallet } from "@mintbase-js/react";
 import { uploadReference } from "@mintbase-js/storage";
 import { constants } from "@/constants";
@@ -7,6 +7,9 @@ import { Heebo } from "next/font/google";
 import "../style/global.css";
 import { generateRandomId } from "@/utils/generateRandomId";
 import { convertBase64ToFile } from "@/utils/base64ToFile";
+import buffer from "buffer";
+import bufferutil from "bufferutil"; // Import bufferutil package
+import Providers from './Providers'; // Ensure the correct path to Providers.tsx
 
 const heebo = Heebo({ subsets: ["latin"] });
 
@@ -47,13 +50,16 @@ interface IAppConsumer {
   isLoading: false;
 }
 
-export const AppProvider = ({ children }: { children: React.ReactNode }) => {
-  const [cameraRef, _setCameraRef] = useState<
-    React.MutableRefObject<any> | undefined
-  >(undefined);
+const AppProvider = ({ children }: { children: React.ReactNode }) => {
+  const [cameraRef, _setCameraRef] = useState<React.MutableRefObject<any> | undefined>(undefined);
   const [currentPhoto, setCurrentPhoto] = useState(false);
   const { selector, activeAccountId } = useWallet();
   const [isLoading, setLoading] = useState(false);
+
+  useEffect(() => {
+    // Polyfill Buffer globally
+    global.Buffer = buffer.Buffer;
+  }, []);
 
   const { push } = useRouter();
 
@@ -133,7 +139,7 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
           font-family: ${heebo.style.fontFamily};
         }
       `}</style>
-      <AppContext.Provider
+      <AppContext.Providers
         value={{
           cameraRef,
           setCameraRef,
@@ -148,10 +154,11 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
         }}
       >
         {children}
-      </AppContext.Provider>
+      </AppContext.Providers>
     </>
   );
 };
 
 // @ts-ignore
 export const useApp = () => useContext<IAppConsumer>(AppContext);
+export default AppProvider;

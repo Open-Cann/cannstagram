@@ -2,6 +2,7 @@ import { constants } from "@/constants";
 import DataProvider from "./data";
 import { AppProvider } from "./app";
 import { WalletContextProvider } from "@mintbase-js/react";
+import React from 'react';
 
 import { setupAuthWallet } from "@mintbase-js/wallet";
 

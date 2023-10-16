@@ -1,6 +1,9 @@
 const express = require('express');
 const fetch = require('node-fetch');
 const cors = require('cors');
+//import fetch from 'node-fetch';
+//import cors from 'cors';
+//import express from 'express';
 
 const app = express();
 const PORT = 3001; // Port on which the proxy server will run
