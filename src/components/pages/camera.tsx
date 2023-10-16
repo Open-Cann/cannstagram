@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Mint } from "@/components/Mint";
 import { FooterButton } from "@/components/footer";
 import Webcam from "react-webcam";
@@ -94,6 +94,9 @@ export default function CameraPage() {
   };
 
   const overlayMask = () => {
+    //const [imageIndex, setImageIndex] = useState(0);
+    //const [countdown, setCountdown] = useState(20);
+
     // Clear existing countdown interval (if any)
     if (countdownIntervalId) {
       clearInterval(countdownIntervalId);
@@ -170,7 +173,7 @@ export default function CameraPage() {
         clearInterval(countdownIntervalId);
       }
     };
-  }, [countdownIntervalId]);
+  }, [countdownIntervalId, imageIndex]);
 
   if (picture) {
     return <Mint currentPhoto={picture} backStep={tryAgain} />;
@@ -180,6 +183,11 @@ export default function CameraPage() {
     // If the composite image is available, show the Mint component
     return <Mint currentPhoto={cameraImage} backStep={tryAgain} />;
   }
+
+  const imageToDisplay = useMemo(() => {
+    return images[imageIndex];
+  }, [imageIndex, images]); // Add imageIndex and images to the dependency array
+
 
   return (
     <>

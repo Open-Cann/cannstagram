@@ -1,6 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 
-const OverlayMask = ({ images, onStart, onComplete }) => {
+interface OverlayMaskProps {
+  images: string[];
+  onStart: () => void;
+  onComplete: () => void;
+}
+
+const OverlayMask: React.FC<OverlayMaskProps> = ({ images, onStart, onComplete }) => {
   const [imageIndex, setImageIndex] = useState(0);
   const [countdown, setCountdown] = useState(20);
 
