@@ -14,7 +14,7 @@ Check out the live demo here: [Cannsta demo](https://cannsta.co/).
 
 ## 🎭 Introducing Masks! 🎭
 
-### **Masks, and all features described in this section were created during the Encode x Near Horizon Hackathon.🎭**
+_**Masks, and all features described in this section were created during the Encode x Near Horizon Hackathon.**_
 
 Do you want to use Cannsta or Minsta, but prefer to stay anon? 🕵️ We gotchu.
 
@@ -32,7 +32,7 @@ To enable saving a composite images required further updates to `camera.tsx` to 
 
 In fixing this bug, we were able to expand the functionality of Masks to allow users to pass in the URL of any image and wear it as thier Mask. The flexibility of using any images in the preloaded array of Masks, along with enabling users to use any Mask they wan, creates a new way for community forks of Minsta to drive engagement.
 
-**Files Created and/or Modified Substantially**
+#### **Files Created and/or Modified Substantially**
 1. [camera.tsx](https://github.com/Open-Cann/cannstagram/blob/main/src/components/pages/camera.tsx)
 2. [OverlayMask.tsx](https://github.com/Open-Cann/cannstagram/blob/main/src/components/OverlayMask.tsx)
 3. [MaskModal.tsx](https://github.com/Open-Cann/cannstagram/blob/main/src/components/MaskModal.tsx)
@@ -41,7 +41,7 @@ In fixing this bug, we were able to expand the functionality of Masks to allow u
 6. [webpack.config.js](https://github.com/Open-Cann/cannstagram/blob/main/webpack.config.js)
 7. [README.md](https://github.com/Open-Cann/cannstagram/blob/main/README.md)
 
-**Known Issues**
+#### **Known Issues**
 1. Can't apply custom Masks. Encountering problems with handling "node:" URIs, specifically for core Node.js modules like "buffer," "fs," "https," "http," and "net.".
 2. Mask composites don't save to capture. Composite is not created correctly.
 
