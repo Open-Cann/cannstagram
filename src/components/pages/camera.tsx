@@ -5,6 +5,7 @@ import Webcam from "react-webcam";
 import { useCamera } from "@/hooks/useCamera";
 import InlineSVG from "react-inlinesvg";
 import OverlayMask from "../OverlayMask";
+import MaskModal from "@/components/MaskModal";
 
 export default function CameraPage() {
   const {
@@ -17,6 +18,14 @@ export default function CameraPage() {
     facingMode,
     setCameraLoaded,
   } = useCamera();
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [customOverlayUrl, setCustomOverlayUrl] = useState<string | null>(null);
+
+  const handleOverlaySubmit = (url: string) => {
+    setCustomOverlayUrl(url);
+    setIsModalOpen(false); // Close the modal after submission
+  };  
 
   const [imageIndex, setImageIndex] = useState<number | null>(null); // Initialize with null
   const proxyUrl = "http://localhost:3001/proxy-image?url=";
@@ -83,7 +92,6 @@ export default function CameraPage() {
     const overlayImageUrl = images[imageIndex];
     compositeImages(cameraImageUrl, overlayImageUrl);
   };
-  
 
   const overlayMask = () => {
     // Clear existing countdown interval (if any)
@@ -208,31 +216,54 @@ export default function CameraPage() {
             />
           )}
 
-          {/* Button container with absolute positioning */}
-          <div className="fixed bottom-100 left-0 w-full flex justify-center p-4">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={overlayMask}
-          >
-            Use a Mask
-          </button>
-          {imageIndex !== null && <p className="text-black ml-4">{`Time: ${countdown}`}</p>}
-        </div>
-        </div>
-      </main>
+        <div className="flex-col items-center justify-center mt-1 bg-gray-700 p-4 rounded">
+          <h2 className="align-center flex font-semibold mb-2 text-mainText text-center">
+            <span className="w-full text-white">🎭 Use a Mask 🎭</span>
+          </h2>
 
-      {!picture && (
-        <footer className="fixed bottom-0 left-0 flex w-full items-end justify-center bg-primary h-16">
-          <FooterButton onClick={handleCapture} />
-        </footer>
-      )}
-      {showOverlay && (
-        <OverlayMask
-          images={images}
-          onStart={handleOverlayStart}
-          onComplete={handleOverlayComplete}
+          <div className="flex items-center justify-center mt-1">
+            <button className="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded" onClick={() => setIsModalOpen(true)}>Custom</button>
+            <button className="ml-2 bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded" onClick={overlayMask}>
+              Show Next
+            </button>
+          </div>
+        </div>
+
+      {/* Modal for adding custom overlay */}
+      <MaskModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onApply={handleOverlaySubmit} onRemoveMask={() => setCustomOverlayUrl(null)}>
+        {/* Content inside your MaskModal */}
+        <input
+          type="text"
+          value={customOverlayUrl || ""}
+          onChange={(e) => setCustomOverlayUrl(e.target.value)}
+          placeholder="Enter Image URL"
         />
+        <button onClick={() => handleOverlaySubmit(customOverlayUrl)}>Apply</button>
+      </MaskModal>
+  
+      {/* Button to remove custom overlay */}
+      {customOverlayUrl && (
+        <button onClick={() => setCustomOverlayUrl(null)}>Remove Mask</button>
       )}
+  
+        {!picture && (
+          <footer className="fixed bottom-0 left-0 flex w-full items-end justify-center bg-primary h-16">
+            <FooterButton onClick={handleCapture} />
+          </footer>
+        )}
+        {showOverlay && (
+          <OverlayMask
+            images={images}
+            onStart={handleOverlayStart}
+            onComplete={handleOverlayComplete}
+          />
+        )}
+          <div>
+          {imageIndex !== null && <p className="align-center flex font-semibold mb-4 text-mainText text-center text-white ml-4 right-2 top-10 absolute">{`Time: ${countdown}`}</p>}
+          </div>
+        </div>
+        
+      </main>
     </>
   );
 }
