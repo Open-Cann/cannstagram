@@ -2,25 +2,35 @@ import React, { useState } from "react";
 import InlineSVG from "react-inlinesvg";
 import "./MaskModal.css"; // Import your CSS file for modal styles
 
-const MaskModal = ({ isOpen, onApply, onRemoveMask, onClose }) => {
-  const [customOverlayUrl, setCustomOverlayUrl] = useState("");
-  const [error, setError] = useState(null);
-
-  const handleOverlaySubmit = () => {
-    // Validate the URL if needed
-    if (customOverlayUrl) {
-      const img = new Image();
-      img.src = customOverlayUrl;
-      img.onload = () => {
-        onApply(customOverlayUrl);
-        setError(null);
-        onClose(); // Close the modal after applying the custom overlay
-      };
-      img.onerror = () => {
-        setError("Not a valid image");
-      };
-    }
-  };
+interface MaskModalProps {
+    isOpen: boolean;
+    onApply: (url: string) => void;
+    onRemoveMask: () => void;
+    onClose: () => void;
+  }
+  
+  const MaskModal: React.FC<MaskModalProps> = ({ isOpen, onApply, onRemoveMask, onClose }) => {
+    const [customOverlayUrl, setCustomOverlayUrl] = useState("");
+    const [error, setError] = useState<string | null>(null);
+  
+    const handleOverlaySubmit = () => {
+      // Validate the URL if needed
+      if (customOverlayUrl) {
+        const proxyUrl = "http://localhost:3001/proxy-image?url="; // Replace this with your proxy server URL
+        const imageUrl = proxyUrl + encodeURIComponent(customOverlayUrl);
+        
+        const img = new Image();
+        img.src = imageUrl;
+        img.onload = () => {
+          onApply(imageUrl);
+          setError(null);
+          onClose(); // Close the modal after applying the custom overlay
+        };
+        img.onerror = () => {
+          setError("Not a valid image");
+        };
+      }
+    };
 
   const handleCancel = () => {
     setCustomOverlayUrl(""); // Clear the input field
