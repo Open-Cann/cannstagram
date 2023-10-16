@@ -44,6 +44,7 @@ In fixing this bug, we were able to expand the functionality of Masks to allow u
 #### **Known Issues**
 1. Can't apply custom Masks. Encountering problems with handling "node:" URIs, specifically for core Node.js modules like "buffer," "fs," "https," "http," and "net.".
 2. Mask composites don't save to capture. Composite is not created correctly.
+3. Multiple issues began when transitioning from a local proxy server to serverless routing using Webpack & Vercel.
 
 
 ## How To Contribute
