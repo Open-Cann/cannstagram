@@ -31,13 +31,13 @@ To enable saving a composite images required further updates to `camera.tsx` to 
 In fixing this bug, we were able to expand the functionality of Masks to allow users to pass in the URL of any image and wear it as thier Mask. The flexibility of using any images in the preloaded array of Masks, along with enabling users to use any Mask they wan, creates a new way for community forks of Minsta to drive engagement.
 
 #### **Files Created and/or Modified Substantially**
-1. [camera.tsx](https://github.com/Open-Cann/cannstagram/blob/main/src/components/pages/camera.tsx)
-2. [OverlayMask.tsx](https://github.com/Open-Cann/cannstagram/blob/main/src/components/OverlayMask.tsx)
-3. [MaskModal.tsx](https://github.com/Open-Cann/cannstagram/blob/main/src/components/MaskModal.tsx)
-4. [MaskModal.css](https://github.com/Open-Cann/cannstagram/blob/main/src/components/MaskModal.css)
-5. [proxy-server.js](https://github.com/Open-Cann/cannstagram/blob/main/proxy-server.js)
-6. [webpack.config.js](https://github.com/Open-Cann/cannstagram/blob/main/webpack.config.js)
-7. [README.md](https://github.com/Open-Cann/cannstagram/blob/main/README.md)
+1. [camera.tsx](https://github.com/Open-Cann/cannstagram/blob/main/src/components/pages/camera.tsx) - edit the list of image URLs in this component to replace preloaded masks displayed by the "Show Next" button
+3. [OverlayMask.tsx](https://github.com/Open-Cann/cannstagram/blob/main/src/components/OverlayMask.tsx)
+4. [MaskModal.tsx](https://github.com/Open-Cann/cannstagram/blob/main/src/components/MaskModal.tsx)
+5. [MaskModal.css](https://github.com/Open-Cann/cannstagram/blob/main/src/components/MaskModal.css)
+6. [proxy-server.js](https://github.com/Open-Cann/cannstagram/blob/main/proxy-server.js)
+7. [webpack.config.js](https://github.com/Open-Cann/cannstagram/blob/main/webpack.config.js)
+8. [README.md](https://github.com/Open-Cann/cannstagram/blob/main/README.md)
 
 #### **Known Issues**
 1. Can't apply custom Masks. Encountering problems with handling "node:" URIs, specifically for core Node.js modules like "buffer," "fs," "https," "http," and "net.".
