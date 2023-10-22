@@ -37,6 +37,19 @@ module.exports = {
       zlib: require.resolve("browserify-zlib"),
     },
   },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        options: {
+          transpileOnly: true,
+          esModuleInterop: true, // Ensure this option is set to true
+        },
+        exclude: /node_modules/,
+      },
+    ],
+  },
   node: {
     global: true,
     __filename: true,
