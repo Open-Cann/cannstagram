@@ -8,7 +8,7 @@ import "../style/global.css";
 import { generateRandomId } from "@/utils/generateRandomId";
 import { convertBase64ToFile } from "@/utils/base64ToFile";
 import buffer from "buffer";
-import bufferutil from "bufferutil"; // Import bufferutil package
+import bufferutil from "bufferutil";
 import Providers from './providers';
 
 const heebo = Heebo({ subsets: ["latin"] });

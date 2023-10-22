@@ -6,7 +6,7 @@ import { useCamera } from "@/hooks/useCamera";
 import InlineSVG from "react-inlinesvg";
 import OverlayMask from "../OverlayMask";
 import MaskModal from "@/components/MaskModal";
-import fetch from 'node-fetch';
+import { fetch } from "node-fetch";
 
 export default function CameraPage() {
   const {
@@ -29,13 +29,15 @@ export default function CameraPage() {
   };  
 
   const [imageIndex, setImageIndex] = useState<number | null>(null); // Initialize with null
-  const proxyUrl = "http://localhost:3001/proxy-image?url=";
+  //const proxyUrl = "http://localhost:3001/proxy-image?url=";
   const images = [
     //`${proxyUrl}https://example.com/image1.jpg`,
     //`${proxyUrl}https://example.com/image2.jpg`,
-    "https://i.ibb.co/3vd5dYS/Open-Cann-Icon-2023.png",
     "https://i.ibb.co/x2KvnKd/cannabisgenome-e-Noun-removebg-preview.png",
-    "https://i.ibb.co/sR34j87/OIP-removebg-preview.png"
+    "https://i.ibb.co/sR34j87/OIP-removebg-preview.png",
+    "https://i.ibb.co/k3xNnMh/shitzu.png",
+    "https://i.ibb.co/JQRT9N5/fiatisabubble.png",
+    "https://i.ibb.co/3vd5dYS/Open-Cann-Icon-2023.png"
   ];
 
   const [countdown, setCountdown] = useState(20); // Initial countdown value in seconds
