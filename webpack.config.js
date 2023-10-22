@@ -2,7 +2,10 @@ const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
-  externals: [nodeExternals()],
+  externals: [nodeExternals({
+    allowlist: ['node:buffer', 'node:fs', 'node:https', 'node:http', 'node:net', 'node:path', 'node:process', 'node:stream/web', 'node:stream', 'node:url', 'node:util', 'node:zlib'],
+  }),
+],
   plugins: [new NodePolyfillPlugin()],
   resolve: {
     fallback: {
